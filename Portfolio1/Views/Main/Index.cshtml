@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Strona główna";
+}
+
+@Html.Action("Slider", "Main")
+
+
+<div class="container">
+    <h2>
+        <br />
+        <hr />
+        <br />
+        Witam,
+        <br />
+        <br />
+        Ta strona jest jednocześnie moim portfolio jak i również CV a jej utworzenie było świetnym sposobem na utrwalenie zdobytej przeze mnie wiedy.
+        <h3 style="text-align:right" > Rafał Rogoda</h3>
+        <hr />
+        <br />
+    </h2>
+    <h4>
+        Możesz śmiało testować tą stronę a nawet zobaczyć kod na moim <a href="https://github.com/Rogoda">GitHub-ie</a> , aby dodawać komentarze na stronie (poniżej) musisz się @Html.ActionLink("zarejestować","Register","LoginRegister")
+    </h4>
+    <br />
+    <br />
+    <br />
+
+    <div class="border">
+    </div>
+</div>
+
+@Html.Action("Comments", "Main")
+
+

@@ -1,0 +1,41 @@
+﻿@model Portfolio1.Models.SendMail
+@{
+    ViewBag.Title = "Thanks";
+}
+
+<div class="container clients-area">
+    <div class="col-md-12">
+        <h1 id="text" class="center">
+            Bardzo Ci dziękuję @Model.Name, że do mnie napisałeś, postaram się odpisać jak najszybiej :)
+        </h1>
+            @{
+                try
+                {
+                    using (Portfolio1Repository.Portfolio1DB context = new Portfolio1Repository.Portfolio1DB())
+                    {
+                        Portfolio1Repository.ContactMe repo = context.ContactMe.FirstOrDefault();
+
+                        WebMail.SmtpServer = repo.ServerSMTP;
+                        WebMail.SmtpPort = 25;
+                        WebMail.EnableSsl = true;
+                        WebMail.UserName = repo.EmailAdres;
+                        WebMail.From = Model.Email;
+                        WebMail.Password = repo.EmailPassword;
+
+                        WebMail.Send(to: repo.EmailAdres,
+                        subject: string.Format("Wiadomość od {0}", Model.Name),
+                        body: Model.Message
+                        );
+                    }
+                }
+                catch (Exception ex)
+                {
+                    <script type="text/javascript">
+                        var textElement = document.getElementById('text');
+                        textElement.innerText = "Przykro mi, ale podczas wysyłki coś poszło nie tak : (";
+                    </script>
+                }
+            }        
+    </div>
+</div>
+

@@ -1,0 +1,28 @@
+﻿@model Portfolio1.Models.LoginModel
+@{
+    ViewBag.Title = "Logowanie";
+}
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container clients-area login">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-3">
+            @Html.ValidationSummary()
+
+            @using(Html.BeginForm("Login", "LoginRegister", FormMethod.Post, new { @class = "form-login" }))
+            {
+                <h4>Witam spowrotem</h4>
+                @Html.Hidden("returnUrl", Request.UrlReferrer)
+                @Html.TextBoxFor(m => m.Login, new { @class = "form-control input-sm chat-input", @placeholder = "login" })
+                <br />
+                @Html.TextBoxFor(m => m.Password, new { @class = "form-control input-sm chat-input", @placeholder = "hasło" , @type = "password" })
+                <br />
+                <div class="wrapper">
+                    <span class="group-btn">
+                        <button type="submit" class="btn btn-primary btn-md">Zaloguj się <i class="fa fa-sign-in"></i></button>
+                    </span>
+                </div>
+            }
+        </div>
+    </div>
+</div>

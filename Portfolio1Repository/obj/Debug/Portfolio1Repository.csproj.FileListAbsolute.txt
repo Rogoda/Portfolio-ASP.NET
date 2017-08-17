@@ -1,0 +1,10 @@
+C:\Users\Rafał\Desktop\ASP.NET\ASP.NET Projects\Portfolio1\Portfolio1Repository\bin\Debug\Portfolio1Repository.dll.config
+C:\Users\Rafał\Desktop\ASP.NET\ASP.NET Projects\Portfolio1\Portfolio1Repository\bin\Debug\Portfolio1Repository.dll
+C:\Users\Rafał\Desktop\ASP.NET\ASP.NET Projects\Portfolio1\Portfolio1Repository\bin\Debug\Portfolio1Repository.pdb
+C:\Users\Rafał\Desktop\ASP.NET\ASP.NET Projects\Portfolio1\Portfolio1Repository\bin\Debug\EntityFramework.dll
+C:\Users\Rafał\Desktop\ASP.NET\ASP.NET Projects\Portfolio1\Portfolio1Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Rafał\Desktop\ASP.NET\ASP.NET Projects\Portfolio1\Portfolio1Repository\bin\Debug\EntityFramework.xml
+C:\Users\Rafał\Desktop\ASP.NET\ASP.NET Projects\Portfolio1\Portfolio1Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Rafał\Desktop\ASP.NET\ASP.NET Projects\Portfolio1\Portfolio1Repository\obj\Debug\Portfolio1Repository.dll
+C:\Users\Rafał\Desktop\ASP.NET\ASP.NET Projects\Portfolio1\Portfolio1Repository\obj\Debug\Portfolio1Repository.pdb
+C:\Users\Rafał\Desktop\ASP.NET\ASP.NET Projects\Portfolio1\Portfolio1Repository\obj\Debug\Portfolio1Repository.csprojResolveAssemblyReference.cache

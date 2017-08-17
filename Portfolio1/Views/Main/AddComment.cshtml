@@ -1,0 +1,30 @@
+﻿@model Portfolio1Repository.Comments
+
+@using (Html.BeginForm("AddComment", "Main", FormMethod.Post))
+{
+    if(User.Identity.IsAuthenticated)
+    {
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div>
+                    @Html.TextAreaFor(m=>m.CommentText , new { @class= "col-md-12 panel panel-default panel-body" , @placeholder="Tutaj wpisz swój kometarz" , @style="color:white" })
+                </div>
+                <div>
+                    <button type="submit" style="color:white;" class="panel panel-default col-md-1 col-md-offset-11">Wyślij</button>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-12 panel panel-default panel-body">
+                    <p style="color:white;">
+                        Należy się zalogować aby móc dodawać komentarze.
+                    </p>
+                </div>
+            </div>
+        </div>
+    }
+}

@@ -1,0 +1,31 @@
+﻿@using (Portfolio1Repository.Portfolio1DB context = new Portfolio1Repository.Portfolio1DB())
+{
+    var elems = from comment in context.Comments
+                join user in context.Users
+                on comment.UserID equals user.UserID
+                select new { comment.CommentDateTime, comment.CommentText, user.LoginName};
+
+    <div class="container comment">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>Komentarze</h3>
+            </div>
+        </div>
+        @foreach (var m in elems)
+        {
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>@m.LoginName</strong> <span class="text-muted">@m.CommentDateTime</span>
+                        </div>
+                        <div class="panel-body" style="color:white">
+                            @m.CommentText
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        @Html.Action("AddComment")
+    </div>
+}
